@@ -1,15 +1,18 @@
- class Manager {
-    String name;
+class Manager extends Employee {
 
-    void sayHello(String name) {
-        System.out.println("hello " + name + ", My name is " + this.name);
+    String company;
+  
+    Manager(String name) {
+      super(name);
     }
-}
-
-class VicePresident extends Manager{
-
-    void sayHello(String name) {
-        System.out.println("Hello " + name + ", My Name is VP " + this.name);
+  
+    Manager(String name, String company) {
+      super(name);
+      this.company = company;
     }
-
-}
+  
+    void sayHello(String name) {
+      System.out.println("Hi " + name + ", My Name Is Manager " + this.name);
+    }
+  
+  }
